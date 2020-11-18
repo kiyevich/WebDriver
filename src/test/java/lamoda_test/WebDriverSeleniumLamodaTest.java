@@ -18,7 +18,7 @@ public class WebDriverSeleniumLamodaTest{
     WebDriver chrome;
 
     @BeforeMethod(alwaysRun = true)
-    public void BrouserSetup(){
+    public void BrowserSetup(){
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER);
         chrome = new ChromeDriver(chromeOptions);
@@ -51,7 +51,7 @@ public class WebDriverSeleniumLamodaTest{
     }
 
     @AfterMethod(alwaysRun = true)
-    public void BrouserTearDown() {
+    public void BrowserTearDown() {
         chrome.quit();
     }
 
