@@ -18,6 +18,7 @@ public class WebDriverSeleniumLamodaTest{
 
     @BeforeMethod(alwaysRun = true)
     public void BrowserSetup(){
+        System.setProperty("webdriver.chrome.driver", "D://WebDriver/drivers/chromedriver.exe");
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER);
         chrome = new ChromeDriver(chromeOptions);
