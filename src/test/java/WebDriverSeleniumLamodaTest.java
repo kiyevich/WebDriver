@@ -46,6 +46,7 @@ public class WebDriverSeleniumLamodaTest{
         Assert.assertTrue(itemsInCart.size()>0,"The item has not been added to the cart");
 
 
+        
 
     }
 
