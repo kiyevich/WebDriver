@@ -32,6 +32,7 @@ public class WebDriverSeleniumLamodaTest{
         WebElement searchButton = chrome.findElement(By.xpath("//div[@class='button button_blue search__button js-search-button']"));
         searchButton.click();
         WebElement searchInput = chrome.findElement(By.xpath("//input[@placeholder='Поиск']"));
+        searchInput.click();
         searchInput.sendKeys("SA007AMJONT5");
         searchInput.sendKeys(Keys.ENTER);
         WebElement sizeChoiceCombobox = chrome.findElement(By.xpath("//div[@class='product-sizes-select ii-select__value ii-select__value_2line']"));
@@ -46,7 +47,6 @@ public class WebDriverSeleniumLamodaTest{
         Assert.assertTrue(itemsInCart.size()>0,"The item has not been added to the cart");
 
 
-        
 
     }
 
