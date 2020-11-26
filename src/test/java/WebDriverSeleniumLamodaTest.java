@@ -32,7 +32,8 @@ public class WebDriverSeleniumLamodaTest{
         chrome.get("https://www.lamoda.by/men-home/");
         WebElement searchButton = chrome.findElement(By.xpath("//div[@class='button button_blue search__button js-search-button']"));
         searchButton.click();
-        WebElement searchInput = chrome.findElement(By.xpath("//input[@placeholder='Поиск']"));
+        //  WebElement searchInput = chrome.findElement(By.xpath("//input[@placeholder='Поиск']"));
+        WebElement searchInput = chrome.findElement(By.xpath(" /html/body/div[1]/div[3]/div/div/div/div/input"));
         searchInput.click();
         searchInput.sendKeys("SA007AMJONT5");
         searchInput.sendKeys(Keys.ENTER);
