@@ -29,30 +29,27 @@ public class WebDriverSeleniumLamodaTest{
     public void AddingItemsToCartTest() throws InterruptedException {
 
 
-//        chrome.get("https://www.lamoda.by/men-home/");
-//        WebElement searchButton = chrome.findElement(By.xpath("//div[@class='button button_blue search__button js-search-button']"));
-//        searchButton.click();
-//        //  WebElement searchInput = chrome.findElement(By.xpath("//input[@placeholder='Поиск']"));
-//        WebElement searchInput = chrome.findElement(By.xpath(" /html/body/div[1]/div[3]/div/div/div/div/input"));
-//        searchInput.click();
-//        searchInput.sendKeys("SA007AMJONT5");
-//        searchInput.sendKeys(Keys.ENTER);
-//        WebElement sizeChoiceCombobox = chrome.findElement(By.xpath("//div[@class='product-sizes-select ii-select__value ii-select__value_2line']"));
-//        sizeChoiceCombobox.click();
-//        WebElement targetSize = chrome.findElement(By.xpath("//div[@data-brand-size='6,5']"));
-//        targetSize.click();
-//        WebElement addToCartButton = chrome.findElement(By.xpath("//button[@title='Добавить в корзину']"));
-//        addToCartButton.click();
-//        WebElement goToCartButton = chrome.findElement(By.xpath("//div[@class='post-cart-add__footer']/div[2]"));
-//        goToCartButton.click();
-//        List<WebElement> itemsInCart = chrome.findElements(By.xpath("//div[@data-sku='SA007AMJONT5B065']"));
-//        Assert.assertTrue(itemsInCart.size()>0,"The item has not been added to the cart");
+       chrome.get("https://www.lamoda.by/men-home/");
+       WebElement searchButton = chrome.findElement(By.xpath("//div[@class='button button_blue search__button js-search-button']"));
+       searchButton.click();
+       //  WebElement searchInput = chrome.findElement(By.xpath("//input[@placeholder='Поиск']"));
+       WebElement searchInput = chrome.findElement(By.xpath(" /html/body/div[1]/div[3]/div/div/div/div/input"));
+       searchInput.click();
+       searchInput.sendKeys("SA007AMJONT5");
+       searchInput.sendKeys(Keys.ENTER);
+       WebElement sizeChoiceCombobox = chrome.findElement(By.xpath("//div[@class='product-sizes-select ii-select__value ii-select__value_2line']"));
+       sizeChoiceCombobox.click();
+       WebElement targetSize = chrome.findElement(By.xpath("//div[@data-brand-size='6,5']"));
+       targetSize.click();
+       WebElement addToCartButton = chrome.findElement(By.xpath("//button[@title='Добавить в корзину']"));
+       addToCartButton.click();
+       WebElement goToCartButton = chrome.findElement(By.xpath("//div[@class='post-cart-add__footer']/div[2]"));
+       goToCartButton.click();
+       List<WebElement> itemsInCart = chrome.findElements(By.xpath("//div[@data-sku='SA007AMJONT5B065']"));
+       Assert.assertTrue(itemsInCart.size()>0,"The item has not been added to the cart");
 
 
-        chrome.get("https://www.lamoda.by/men-home/");
-        WebElement searchButton = chrome.findElement(By.xpath("//div[@class='button button_blue search__button js-search-button']"));
-        searchButton.click();
-        Assert.assertTrue(true);
+
     }
 
     @AfterMethod(alwaysRun = true)
