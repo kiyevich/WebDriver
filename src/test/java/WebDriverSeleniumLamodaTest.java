@@ -1,4 +1,3 @@
-package lamoda_test;
 
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
