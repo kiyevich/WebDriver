@@ -21,6 +21,7 @@ public class WebDriverSeleniumLamodaTest{
         System.setProperty("webdriver.chrome.driver", "D://WebDriver/drivers/chromedriver.exe");
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER);
+        chromeOptions.addArguments("--lang=ru");
         chrome = new ChromeDriver(chromeOptions);
         chrome.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
@@ -37,8 +38,8 @@ public class WebDriverSeleniumLamodaTest{
        searchInput.click();
        searchInput.sendKeys("SA007AMJONT5");
        searchInput.sendKeys(Keys.ENTER);
-        WebElement addToCartButton = chrome.findElement(By.xpath("//button[@class='x-button x-button_primaryFilled x-button_48 x-button_intrinsic-width _13UOn2F1A_KnQ1IvIHusVP']"));
-       WebElement sizeChoiceCombobox = chrome.findElement(By.xpath("//div[@tabindex='0']"));
+        WebElement addToCartButton = chrome.findElement(By.xpath("//button[@class]"));
+ //      WebElement sizeChoiceCombobox = chrome.findElement(By.xpath("//div[@tabindex='0']"));
         addToCartButton.click();
        WebElement targetSize = chrome.findElement(By.xpath("//*[@id=\"vue-root\"]/div[2]/div[1]/div[2]/div[2]/div/div[3]/div/div[3]/div/div[1]/div/div[2]/div[2]/div[1]"));
        targetSize.click();
