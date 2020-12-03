@@ -24,6 +24,7 @@ public class WebDriverSeleniumLamodaTest{
         chromeOptions.addArguments("--lang=ru");
         chrome = new ChromeDriver(chromeOptions);
         chrome.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
     }
 
     @Test
@@ -38,9 +39,10 @@ public class WebDriverSeleniumLamodaTest{
        searchInput.click();
        searchInput.sendKeys("SA007AMJONT5");
        searchInput.sendKeys(Keys.ENTER);
+        String assertItemTitle = "Ботинки трекинговые OUTward GTX";
 
         WebElement titleElement = chrome.findElement(By.xpath("//span[@class='product-title__model-name']"));
-        Assert.assertEquals(titleElement.getText(),"Ботинки трекинговые OUTward GTX");
+        Assert.assertEquals(titleElement.getText().getBytes(),assertItemTitle.getBytes());
 
 
 
