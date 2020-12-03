@@ -27,7 +27,7 @@ public class WebDriverSeleniumLamodaTest{
     }
 
     @Test
-    public void AddingItemsToCartTest() throws InterruptedException {
+    public void SearchItemTest() throws InterruptedException {
 
 
        chrome.get("https://www.lamoda.by/men-home/");
@@ -38,16 +38,9 @@ public class WebDriverSeleniumLamodaTest{
        searchInput.click();
        searchInput.sendKeys("SA007AMJONT5");
        searchInput.sendKeys(Keys.ENTER);
-        WebElement addToCartButton = chrome.findElement(By.xpath("//button[@class]"));
- //      WebElement sizeChoiceCombobox = chrome.findElement(By.xpath("//div[@tabindex='0']"));
-        addToCartButton.click();
-       WebElement targetSize = chrome.findElement(By.xpath("//*[@id=\"vue-root\"]/div[2]/div[1]/div[2]/div[2]/div/div[3]/div/div[3]/div/div[1]/div/div[2]/div[2]/div[1]"));
-       targetSize.click();
-       addToCartButton.click();
-       WebElement goToCartButton = chrome.findElement(By.xpath("//div[@class='d-modal__bottom']/a"));
-       goToCartButton.click();
-       List<WebElement> itemsInCart = chrome.findElements(By.xpath("//div[@data-sku='SA007AMJONT5B065']"));
-       Assert.assertTrue(itemsInCart.size()>0,"The item has not been added to the cart");
+
+        WebElement titleElement = chrome.findElement(By.xpath("//span[@class='product-title__model-name']"));
+        Assert.assertEquals(titleElement.getText(),"Ботинки трекинговые OUTward GTX");
 
 
 
